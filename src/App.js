@@ -1,5 +1,5 @@
 
-import './App.css';
+import './css/App.css';
 import NavBar from './components/NavBar';
 import Favorite from './pages/Favorite';
 //import MovieCard from './components/MovieCard';
