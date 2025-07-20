@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+
 import './App.css';
+import MovieCard from './components/MovieCard';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <MovieCard movie={{
+        title:'Titanic',
+        released_date:'2024'
+      }}/>
+      <MovieCard movie={{
+        title:'John wick',
+        released_date:'2011'
+      }}/>
+      <MovieCard movie={{
+        title:'GOT',
+        released_date:'2024'
+      }}/>
     </div>
   );
 }
 
+function Text({display}){
+  return (
+    <div>
+      <p>{display}</p>
+    </div>
+  );
+}
 export default App;
