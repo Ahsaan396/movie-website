@@ -1,4 +1,4 @@
-function MovieCard({movie}){
+export function MovieCard({movie}){
     function onFavClick(){
         alert("clicked!")
     }
