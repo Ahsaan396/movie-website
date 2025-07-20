@@ -8,7 +8,11 @@ function Home() {
         { id: 3, title: "Titanic", released_date: "2020" }
     ];
     const [searchQuery, setSearchQuery]=useState("");
-    const handleSearch= () =>{};
+    const handleSearch= (e) =>{
+        e.preventDefault();
+        alert(searchQuery);
+        setSearchQuery("-----");
+    };
     return (
         <div className="home">
             <form onSubmit={handleSearch} className="search-form">
