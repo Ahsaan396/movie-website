@@ -1,14 +1,26 @@
 .movie-card {
-    position: relative;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: #1a1a1a;
-    transition: transform 0.2s;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  transition: transform 0.2s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 250px; 
+}
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  padding: 1rem;
+}
+
+
+
   .movie-card:hover {
     transform: translateY(-5px);
   }
