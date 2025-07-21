@@ -30,7 +30,15 @@ export function MovieCard({ movie }) {
             </div>
             <div className="movie-info">
                 <h3>{movie.title}</h3>
-                <p>{movie.released_date?.split("-")[0]}</p>
+                <p>
+                    {movie.release_date
+                        ? new Date(movie.release_date).toLocaleDateString('en-US', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                        })
+                        : "Release date unknown"}
+                </p>
             </div>
         </div>
     );
