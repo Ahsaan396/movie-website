@@ -91,10 +91,13 @@
     gap: 0.5rem;
   }
   
-  .movie-info h3 {
-    font-size: 1rem;
-    margin: 0;
+  .movie-info h3,
+  .movie-overlay h3 {
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    font-weight: bold;
   }
+  
   
   .movie-info p {
     color: rgb(129, 71, 71);
