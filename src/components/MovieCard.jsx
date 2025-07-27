@@ -20,12 +20,25 @@ export function MovieCard({ movie }) {
                 />
                 <div className="movie-overlay">
                     <button
-                        className={`favorite-btn ${isFavorite(movie.id) ? 'active' : ''}`}
-
                         onClick={handleFavClick}
+                        className={`favorite-btn ${isFavorite(movie.id) ? 'active' : ''}`}
+                        title={isFavorite(movie.id) ? 'Saved' : 'Save'}
                     >
-                        ❤️
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill={isFavorite(movie.id) ? 'white' : 'none'}
+                            stroke={isFavorite(movie.id) ? 'white' : '#e63946'}
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        >
+                            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+                        </svg>
                     </button>
+
                 </div>
             </div>
             <div className="movie-info">
